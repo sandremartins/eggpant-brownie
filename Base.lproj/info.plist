@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Executable file</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>Localization native development region</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>InfoDictionary version</key>
+	<string>6.0</string>
+	<key>Bundle name</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>Bundle OS Type code</key>
+	<string>APPL</string>
+	<key>Bundle versions string, short</key>
+	<string>1.0</string>
+	<key>Bundle version</key>
+	<string>1</string>
+	<key>Application requires iPhone environment</key>
+	<true/>
+	<key>Launch screen inteface file base name</key>
+	<string>LauchScreen</string>
+	<key>Main storyboard file base name</key>
+	<string>Main</string>
+</dict>
+</plist>

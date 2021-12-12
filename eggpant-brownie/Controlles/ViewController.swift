@@ -11,7 +11,11 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdicionarItensDelegate {
+
+    // MARK: - IBOutlet
+    @IBOutlet weak var itensTableView: UITableView!
+    
     
     // MARK: - Atributos
     
@@ -26,6 +30,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet weak var felicidadeTextField: UITextField?
+    
+    // MARK: - View life cycle
+    
+    override func viewDidLoad() {
+        let botaoAdicionarItem = UIBarButtonItem(title: "adicionar", style: .plain, target: self, action: #selector(self.adicionarItens))
+        navigationItem.rightBarButtonItem = botaoAdicionarItem
+    }
+    
+    @objc func adicionarItens() {
+        // print("adicionar novo item na lista")
+        let adicionarItensViewController = AdicionarItensViewController(delegate: self)
+        navigationController?.pushViewController(adicionarItensViewController, animated: true)
+    }
+    
+    func add(_ item: Item) {
+        itens.append(item)
+        itensTableView.reloadData()
+    }
     
     // MARK: - UITableViewDataSource
     
@@ -91,6 +113,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         delegate?.add(refeicao)
         // metodo popViewController volta a tela sem empilhar telas no navigation Controller
+        // navegar para proxima tela: navigationController.push()
+        // voltar para tela anterior: navigationController.pop()
         navigationController?.popViewController(animated: true)
     }
     

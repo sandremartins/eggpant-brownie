@@ -17,6 +17,7 @@
 		268CB8AC2764F4A200645A0E /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CB8AB2764F4A200645A0E /* RefeicoesTableViewController.swift */; };
 		268CB8AF27662EBC00645A0E /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268CB8AD27662EBB00645A0E /* AdicionarItensViewController.swift */; };
 		268CB8B027662EBC00645A0E /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268CB8AE27662EBB00645A0E /* AdicionarItensViewController.xib */; };
+		26C7B00027B1615500F7EB29 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7AFFF27B1615500F7EB29 /* Alerta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		268CB8AB2764F4A200645A0E /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 		268CB8AD27662EBB00645A0E /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
 		268CB8AE27662EBB00645A0E /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
+		26C7AFFF27B1615500F7EB29 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				26809ED42752673F001BD1C9 /* Refeicao.swift */,
 				26809ED6275268B7001BD1C9 /* Item.swift */,
+				26C7AFFF27B1615500F7EB29 /* Alerta.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				268CB8AC2764F4A200645A0E /* RefeicoesTableViewController.swift in Sources */,
 				26809ED52752673F001BD1C9 /* Refeicao.swift in Sources */,
 				26722374275039C9001AF2DF /* AppDelegate.swift in Sources */,
+				26C7B00027B1615500F7EB29 /* Alerta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

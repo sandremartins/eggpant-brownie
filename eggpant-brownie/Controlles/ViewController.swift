@@ -49,10 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let tableView = itensTableView {
             tableView.reloadData()
         } else {
-            let alerta = UIAlertController(title: "Desculpa", message: "não foi possível atualizar a tabela", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-            alerta.addAction(ok)
-            present(alerta, animated: true, completion: nil)
+            Alerta(controller: self).exibe(mensagem: "Não foi possível atualizar a tabela")
         }
     }
     
@@ -99,30 +96,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    // MARK: - IBActions
-    
-    @IBAction func adicionar(_ sender: Any) {
-        
+    func recuperaRefeicaoDoFormulario() -> Refeicao? {
         // o guard let é para evitar crash. Verificar uma variavel que vai ser usada no escopo do codigo todo. Em outras ocasioe pode usar if no lugar
         guard let nomeDaRefeicao = nomeTextField?.text else {
-            return
+            return nil
         }
         
         guard let felicidadeDaRefeicao = felicidadeTextField?.text, let felicidade = Int(felicidadeDaRefeicao) else {
-            return
+            return nil
         }
         
         let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
         
-        refeicao.itens = itensSelecionados
-        
-        print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-        
-        delegate?.add(refeicao)
-        // metodo popViewController volta a tela sem empilhar telas no navigation Controller
-        // navegar para proxima tela: navigationController.push()
-        // voltar para tela anterior: navigationController.pop()
-        navigationController?.popViewController(animated: true)
+        return refeicao
     }
     
+    // MARK: - IBActions
+    
+    @IBAction func adicionar(_ sender: Any) {
+        
+//        let refeicao = recuperaRefeicaoDoFormulario()
+        
+//        guard let refeicao = recuperaRefeicaoDoFormulario() else { return }
+        
+        if let refeicao = recuperaRefeicaoDoFormulario() {
+            delegate?.add(refeicao)
+            // metodo popViewController volta a tela sem empilhar telas no navigation Controller
+            // navegar para proxima tela: navigationController.push()
+            // voltar para tela anterior: navigationController.pop()
+            navigationController?.popViewController(animated: true)
+        } else {
+            Alerta(controller: self).exibe(mensagem: "Erro ao ler dados do formulário")
+        }
+    }
 }

@@ -19,6 +19,8 @@
 		268CB8B027662EBC00645A0E /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268CB8AE27662EBB00645A0E /* AdicionarItensViewController.xib */; };
 		26C7B00027B1615500F7EB29 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7AFFF27B1615500F7EB29 /* Alerta.swift */; };
 		26C7B00227B19F8000F7EB29 /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B00127B19F8000F7EB29 /* RemoveRefeicaoViewController.swift */; };
+		26C7B00427B1CCAE00F7EB29 /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B00327B1CCAE00F7EB29 /* RefeicaoDao.swift */; };
+		26C7B00627B1D05B00F7EB29 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B00527B1D05B00F7EB29 /* ItemDao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		268CB8AE27662EBB00645A0E /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		26C7AFFF27B1615500F7EB29 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		26C7B00127B19F8000F7EB29 /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
+		26C7B00327B1CCAE00F7EB29 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
+		26C7B00527B1D05B00F7EB29 /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				26809ED42752673F001BD1C9 /* Refeicao.swift */,
 				26809ED6275268B7001BD1C9 /* Item.swift */,
 				26C7AFFF27B1615500F7EB29 /* Alerta.swift */,
+				26C7B00327B1CCAE00F7EB29 /* RefeicaoDao.swift */,
+				26C7B00527B1D05B00F7EB29 /* ItemDao.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,7 +188,9 @@
 				26C7B00227B19F8000F7EB29 /* RemoveRefeicaoViewController.swift in Sources */,
 				26809ED7275268B7001BD1C9 /* Item.swift in Sources */,
 				268CB8AF27662EBC00645A0E /* AdicionarItensViewController.swift in Sources */,
+				26C7B00427B1CCAE00F7EB29 /* RefeicaoDao.swift in Sources */,
 				2672237C275039C9001AF2DF /* ViewController.swift in Sources */,
+				26C7B00627B1D05B00F7EB29 /* ItemDao.swift in Sources */,
 				268CB8AC2764F4A200645A0E /* RefeicoesTableViewController.swift in Sources */,
 				26809ED52752673F001BD1C9 /* Refeicao.swift in Sources */,
 				26722374275039C9001AF2DF /* AppDelegate.swift in Sources */,
